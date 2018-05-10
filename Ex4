@@ -1,0 +1,32 @@
+package lista15;
+import java.util.Scanner;
+public class ex4 {
+
+	public static void main(String[] args) {
+		double altura = 0;
+		int sexo;
+		double pesoideal = 0;
+		Scanner entrada = new Scanner(System.in);
+		System.out.println("Insura sua altura (em metros)");
+		altura = entrada.nextDouble();
+		System.out.println("Insira seu sexo(1 para masculino e 2 para feminino)");
+		sexo = entrada.nextInt();
+		if(sexo==1){
+			pesoideal = calcularPesoIdeal(altura,sexo);
+		}else if(sexo==2){
+			pesoideal = calcularPesoIdeal(altura,sexo);
+		}else{
+			System.out.println("SexoINVALIDO");
+		}
+		System.out.println("Seu peso ideal é "+ pesoideal);
+	}
+	public static double calcularPesoIdeal(double alt,int sex) {
+		double pi;
+		if(sex==1){
+			pi = 72.7 * alt - 58;
+		}else{
+			pi = 62.1 * alt - 44.7;
+		}
+		return pi;
+	}
+}
