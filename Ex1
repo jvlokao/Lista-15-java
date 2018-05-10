@@ -1,0 +1,23 @@
+package lista15;
+import java.util.Scanner;
+public class Ex1 {
+
+	public static void main(String[] args) {
+		double cateto1,cateto2,hipotenusa;
+		Scanner entrada = new Scanner(System.in);
+		System.out.println("Insira os dois catetos de um triangulo retangulo");
+		cateto1 = entrada.nextDouble();
+		cateto2 = entrada.nextDouble();
+		hipotenusa = calcularHipotenusa(cateto1,cateto2);
+		System.out.println("A Hipotenusa desse triangulo é "+ hipotenusa);
+		
+
+	}
+	
+	public static double calcularHipotenusa(double cat1, double cat2){
+		double hipo;
+		hipo = ((cat1*cat1)+(cat2*cat2));
+		hipo = Math.sqrt(hipo);
+		return hipo;
+	}
+}
