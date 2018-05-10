@@ -1,0 +1,21 @@
+package lista15;
+import java.util.Scanner;
+public class ex3 {
+	public static void main(String[] args) {
+		int anos,mes,dia,diastotal;
+		Scanner entrada = new Scanner(System.in);
+		System.out.println("Insira sua idade em dias anos, meses e dias");
+		anos = entrada.nextInt();
+		mes = entrada.nextInt();
+		dia = entrada.nextInt();
+		diastotal = calcularDiasTotal(anos,mes,dia);
+		System.out.println("A sua idade em dias é " + diastotal);
+	}
+	public static int calcularDiasTotal(int a, int m, int d){
+		int dt;
+		dt = a*365;
+		dt += m*30;
+		dt += d;
+		return dt;
+		}
+}
