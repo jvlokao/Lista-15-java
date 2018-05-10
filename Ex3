@@ -17,5 +17,6 @@ public class ex3 {
 		dt += m*30;
 		dt += d;
 		return dt;
-		}
+	}
+		
 }
