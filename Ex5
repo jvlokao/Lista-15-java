@@ -1,0 +1,28 @@
+package lista15;
+import java.util.Scanner;
+public class ex5 {
+
+	public static void main(String[] args) {
+		int nota1,nota2,nota3,media,mediapon;
+		Scanner entrada = new Scanner(System.in);
+		System.out.println("insira as notas de um alunas nas P1,P2,P3 Respectivamente");
+		nota1 = entrada.nextInt();
+		nota2 = entrada.nextInt();
+		nota3 = entrada.nextInt();
+		media = calcularMedia(nota1,nota2,nota3);
+		mediapon = calcularMediapon(nota1,nota2,nota3);
+		System.out.println("A media aritmetica é "+media);
+		System.out.println("a media ponderada é "+ mediapon);
+		
+	}
+	public static int calcularMedia(int p1, int p2, int p3){
+		int resulta;
+		resulta = (p1+p2+p3)/3;
+		return resulta;
+	}
+	public static int calcularMediapon(int p1, int p2, int p3){
+		int resulta;
+		resulta = ((p1*5)+(p2*3)+(p3*2)/10);
+		return resulta;
+		}
+}
