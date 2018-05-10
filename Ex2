@@ -1,0 +1,19 @@
+package lista15;
+import java.util.Scanner;
+public class Ex2 {
+
+	public static void main(String[] args) {
+		double raio,volume;
+		Scanner entrada = new Scanner(System.in);
+		System.out.println("Insira o raio de uma circunferencia");
+		raio = entrada.nextDouble();
+		volume = calcularVolume(raio);
+		System.out.println("O volume da circunferencia é "+ volume);
+
+	}
+	public static double calcularVolume(double r){
+		double vol;
+		vol = ((4*(3.14)*(r*r*r))/3);
+		return vol;
+	}
+}
